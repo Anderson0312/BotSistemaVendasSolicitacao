@@ -11,6 +11,9 @@ planilha = pd.read_excel("pedidos.xlsx")
 
 print(planilha.head())
 
+#para pegarmos a localização de onde queremos clicar
+print(pyautogui.position())
+
 # Simula pressionamento da tecla Win
 pyautogui.hotkey('win')
 
