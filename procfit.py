@@ -39,11 +39,8 @@ pyautogui.write('123456')
 
 # # Simula pressionamento da tecla tab
 pyautogui.hotkey('tab')
-pyautogui.hotkey('tab')
 
 pyautogui.hotkey('enter')
-pyautogui.hotkey('enter')
-
 
 # Simula pressionamento do botão de funçoes
 pyautogui.moveTo(147, 601, 0.2)
@@ -77,20 +74,27 @@ for index, row in planilha.iterrows():
         pyautogui.hotkey('tab')
         
          #insere o numero da transportadora para puxar os dados
-        pyautogui.write('78451')
+        pyautogui.write('78056')
+        pyautogui.hotkey('tab')
         
         # Simula pressionamento do botão de insirir produtos de acordo com o numeor do pedido
         pyautogui.moveTo(147, 601, 0.2)
 
         pyautogui.click(147, 601)
         
+        time.sleep(0.5)
+        
         # # Simula pressionamento da atalho para salvar o pedido
         pyautogui.hotkey('ctrl', 'g')
+        
+        time.sleep(1)
                 
         # Simula pressionamento de solicitar a impressão do pedido
         pyautogui.moveTo(147, 601, 0.2)
 
         pyautogui.click(147, 601)
+        
+        time.sleep(1.5)
         
         # Simula pressionamento de solicitar a impressão do pedido
         pyautogui.moveTo(147, 601, 0.2)
