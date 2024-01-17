@@ -1,0 +1,16 @@
+Projeto de Automação de sistema utilizando Python.
+
+As rotinas de trabalho, muitas vezes, são repletas de procedimentos padronizados que são executados de forma manual e consomem um tempo valioso do colaborador. No entanto, é possível, por meio da identificação de padrões e aplicação da programação, otimizar o uso desse tempo e gerar mais produtividade às rotinas de trabalho, permitindo que o colaborador direcione sua atenção para atividades que demandam um pouco mais de “execução humana”.
+
+Descrição do projeto
+Emissão de Pedidos para separação(empresa de logistica) Automática, utilizando a biblioteca pyautogui. Este projeto tem como objetivo gerar romaneios com os produtos que serão separados pelo funcionario, e enviá-las para imprimir automaticamente na empressora para os funcionarios separarem. Para isso, foi necessário coletar as informações presentes em uma planilha Excel, que posteriormente serão usadas para preenchimento dos campos em sistema da empresa. anteriomente o codigo entra em um outro sistema que é integrado ao de solicitação e salva todos os pedidos que serão solicitados, armazenando em um arquivo .CSV para ser usado na parte principal da automação, assim o bot entra em loop e gerá romaneio de todos os pedidos que forem enviados para separaçaõ.
+
+Estruturação do código:
+1.      Integração com o Google utilizando o webdriver do “pyautogui”;
+2.      Leitura de planilha Excel com o “Pandas”;
+3.      Leitura dos arquivos XML usando a biblioteca “xmltodict”;
+4.      Interação com os elementos do navegador usando os métodos do “Selenium”;
+5.      Importando a biblioteca “datetime” para personalização do nome do arquivo e mensagem do e-mail.
+
+hashtag#python hashtag#automacaoweb
+	
