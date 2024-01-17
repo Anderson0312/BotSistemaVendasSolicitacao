@@ -1,15 +1,13 @@
 import procfit
 import programare
 
-import pandas as pd
-
 import pyautogui
 pyautogui.PAUSE = 0.5
 import time
 
 
-programare.programareloginAuto()
-procfit.procfitLoginAuto()
+programare.programareloginAuto('lucas rosa', 'lucas')
+procfit.procfitLoginAuto('anderson moura', '123456')
 
 while True:
     programare.programareSaveAuto()

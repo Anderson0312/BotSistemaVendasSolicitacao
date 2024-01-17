@@ -2,7 +2,7 @@ import pyautogui
 pyautogui.PAUSE = 0.5
 import time
 
-def programareloginAuto():
+def programareloginAuto(login, password):
     # Simula pressionamento da tecla Win
     pyautogui.hotkey('win')
 
@@ -16,9 +16,9 @@ def programareloginAuto():
     time.sleep(13)
 
     # # Simula pressionamento da tecla tab
-    pyautogui.write('lucas rosa')
+    pyautogui.write(login)
     pyautogui.hotkey('tab')
-    pyautogui.write('lucas')
+    pyautogui.write(password)
 
     #Simula pressionamento da tecla tab
     pyautogui.hotkey('tab')
@@ -29,11 +29,12 @@ def programareloginAuto():
     pyautogui.moveTo(927, 225, 0.2)
     pyautogui.click(927, 225)
 
+
+def programareSaveAuto():
     # Simula pressionamento do botão de funçoes
     pyautogui.moveTo(36, 154, 0.2)
     pyautogui.click(36, 154)
-
-def programareSaveAuto():
+    
     # Simula pressionamento do botão de funçoes
     pyautogui.moveTo(998, 131, 0.2)
     pyautogui.click(998, 131)
