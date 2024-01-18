@@ -1,7 +1,7 @@
 import pandas as pd
 
 import pyautogui
-pyautogui.PAUSE = 1
+pyautogui.PAUSE = 0.5
 import time
 
 
@@ -15,18 +15,18 @@ def procfitLoginAuto(login, password):
         pyautogui.write('proc') 
         pyautogui.write('fi')
 
-        time.sleep(0.3)
+        time.sleep(0.4)
 
         # Simula pressionamento da tecla enter
         pyautogui.hotkey('enter')
 
-        time.sleep(4)
+        time.sleep(4.5)
 
         # Simula pressionamento da tecla tab
         pyautogui.hotkey('tab')
         # Simula pressionamento da tecla tab
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         pyautogui.write(login)
         pyautogui.hotkey('tab')
@@ -37,7 +37,7 @@ def procfitLoginAuto(login, password):
 
         pyautogui.hotkey('enter')
 
-        time.sleep(0.5)
+        time.sleep(1)
 
 
         # Simula pressionamento do botão de funçoes
@@ -82,36 +82,36 @@ def procfitInsertPedidoAuto():
                         time.sleep(0.2)
                         
                         #insere o numero da transportadora para puxar os dados
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
-                        pyautogui.hotkey('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
+                        pyautogui.press('tab')
                         pyautogui.write('81749')
-                        pyautogui.hotkey('tab')
+                        pyautogui.press('tab')
                         
                         # Simula pressionamento do botão de insirir produtos de acordo com o numeor do pedido
                         pyautogui.moveTo(220, 163, 0.2)
 
                         pyautogui.click(220, 163)
                         
-                        time.sleep(0.5)
+                        time.sleep(0.7)
                         
                         # # Simula pressionamento da atalho para salvar o pedido
                         pyautogui.hotkey('ctrl', 'g')
                         
-                        time.sleep(2.5)
+                        time.sleep(3)
                                 
                         # Simula pressionamento de solicitar a impressão do pedido
                         pyautogui.moveTo(824, 162, 0.2)
 
                         pyautogui.click(824, 162)
                         
-                        time.sleep(6.5)
+                        time.sleep(7)
                         
                         
                         # Simula pressionamento de solicitar a impressão do pedido
@@ -119,25 +119,28 @@ def procfitInsertPedidoAuto():
 
                         pyautogui.click(222, 89)
 
-                        time.sleep(0.2)
+                        time.sleep(0.3)
                         
                         pyautogui.hotkey('enter')
 
-                        time.sleep(0.2)
+                        time.sleep(0.3)
                         pyautogui.hotkey('enter')
 
                         time.sleep(0.3)
+                        
+                        planilha = planilha.drop(index)
+                        planilha.to_excel('pedidos.csv', index=False)
 
                         # # Simula pressionamento da atalho para fechar a aba aberta
                         pyautogui.hotkey('ctrl', 's')
 
-                        time.sleep(2)
+                        time.sleep(2.5)
                         # Remove essa linha se deseja percorrer todos os IDs
 
                         # # Simula pressionamento do comando de atalho para iniciar um novo formulario de solicitação de pedido
                         pyautogui.hotkey('ctrl', 'i')
-
-                        time.sleep(0.3)
+                        
+                        time.sleep(0.5)
                 else:
                         break
 
