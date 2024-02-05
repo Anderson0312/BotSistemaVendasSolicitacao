@@ -1,11 +1,11 @@
 import pandas as pd
 
 import pyautogui
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 1
 import time
 
 
-#para pegarmos a localização de onde queremos clicar
+# para pegarmos a localização de onde queremos clicar
 #print(pyautogui.position())
 
 def procfitLoginAuto(login, password): 
@@ -20,7 +20,7 @@ def procfitLoginAuto(login, password):
         # Simula pressionamento da tecla enter
         pyautogui.hotkey('enter')
 
-        time.sleep(4.5)
+        time.sleep(7)
 
         # Simula pressionamento da tecla tab
         pyautogui.hotkey('tab')
@@ -69,30 +69,28 @@ def procfitInsertPedidoAuto():
         numero_de_linhas = len(planilha)
         # Iterar sobre os IDs e armazená-los em uma variável
         for index, row in planilha.iterrows():
-                if numero_de_linhas != 0:
-                        id_selecionado = int(row['Externo'])
+                if numero_de_linhas == 1:
+                        print('Planilha de pedido vazia')
+                        break
+                else:
+                        id_selecionado = row['Externo']
                         
                         numpedidoStr = str(id_selecionado)
-                        
+                        pedidoFiltrado = numpedidoStr[:-2]
                         #insere o numero do produto para puxar os dados
-                        pyautogui.write(numpedidoStr)
+                        pyautogui.write(pedidoFiltrado)
+                        #print(pedidoFiltrado)
                         
                         # # Simula pressionamento da tecla tab até o input de transportadora
                         pyautogui.hotkey('tab')
                         time.sleep(0.2)
                         
                         #insere o numero da transportadora para puxar os dados
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.press('tab')
-                        pyautogui.write('81749')
-                        pyautogui.press('tab')
+                        pyautogui.moveTo(321, 423, 0.2)
+
+                        pyautogui.click(321, 423)
+
+                        time.sleep(0.2)
                         
                         # Simula pressionamento do botão de insirir produtos de acordo com o numeor do pedido
                         pyautogui.moveTo(220, 163, 0.2)
@@ -123,13 +121,18 @@ def procfitInsertPedidoAuto():
                         
                         pyautogui.hotkey('enter')
 
-                        time.sleep(0.3)
-                        pyautogui.hotkey('enter')
+                        # time.sleep(0.3)
+                        # pyautogui.hotkey('enter')
 
-                        time.sleep(0.3)
+                        time.sleep(0.5)
                         
-                        planilha = planilha.drop(index)
-                        planilha.to_excel('pedidos.csv', index=False)
+                        # planilha = planilha.drop(index)
+                        # planilha.to_csv('pedidos.csv', index=False)
+                        pyautogui.moveTo(677, 692)
+
+                        pyautogui.click(677, 692)
+
+                        time.sleep(0.2)
 
                         # # Simula pressionamento da atalho para fechar a aba aberta
                         pyautogui.hotkey('ctrl', 's')
@@ -141,9 +144,6 @@ def procfitInsertPedidoAuto():
                         pyautogui.hotkey('ctrl', 'i')
                         
                         time.sleep(0.5)
-                else:
-                        break
-
-
-
-
+         
+        print(f'Quantidade de pedidos empressos foram({numero_de_linhas}), Fim dos pedidos')        
+                
