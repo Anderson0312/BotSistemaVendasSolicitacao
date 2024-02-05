@@ -9,8 +9,6 @@ Estruturação do código:
 1.      Integração com o Google utilizando o webdriver do “pyautogui”;
 2.      Leitura de planilha Excel com o “Pandas”;
 3.      Leitura dos arquivos XML usando a biblioteca “xmltodict”;
-4.      Interação com os elementos do navegador usando os métodos do “Selenium”;
-5.      Importando a biblioteca “datetime” para personalização do nome do arquivo e mensagem do e-mail.
 
-hashtag#python hashtag#automacaoweb
+hashtag#python hashtag#automacao
 	

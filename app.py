@@ -15,8 +15,8 @@ procfit.procfitInsertPedidoAuto()
 
 # Faz todo o processo do zero, parte de solicitar pedido e atualizar a planilha com os dados necessarios
 
-# programare.programareloginAuto('lucas rosa', 'lucas')
-# procfit.procfitLoginAuto('anderson moura', '123456')
+# programare.programareloginAuto('lucas rosa', '')
+# procfit.procfitLoginAuto('anderson moura', '')
 # pyautogui.hotkey('alt', 'tab')  
 
 # while True: 

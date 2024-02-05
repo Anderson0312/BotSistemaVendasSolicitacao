@@ -13,8 +13,8 @@ for index, row in dados.iterrows():
     # Ou então, fazer alguma operação com o ID selecionado
     
     # Para sair do loop após o primeiro ID selecionado, remova o 'break' abaixo
-    dados = dados.drop(index)
-    dados.to_excel('pedidos.xlsx', index=False)
+    # dados = dados.drop(index)
+    # dados.to_excel('pedidos.xlsx', index=False)
     # Verificar o número de linhas no DataFrame
     numero_de_linhas = len(dados)
     print(f"O DataFrame contém {numero_de_linhas} linha(s) de dados.")
